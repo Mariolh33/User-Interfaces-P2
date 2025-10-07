@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!passwordRegex.test(password))
       return mostrarError("La contraseña debe tener al menos 8 caracteres, 2 números, 1 símbolo, 1 mayúscula y 1 minúscula.");
 
-    if (!foto) return mostrarError("Debe seleccionar una foto de perfil.");
+   
     const extensionesPermitidas = ["image/webp", "image/png", "image/jpeg"];
     if (!extensionesPermitidas.includes(foto.type))
       return mostrarError("Formato de imagen no válido. Solo se permiten .webp, .png y .jpg.");
