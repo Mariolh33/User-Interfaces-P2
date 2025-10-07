@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mochileros sin Fronteras</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/comprar.css">
+  
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="images/Logo.png" height=50 width=50 alt="Logo de Mochileros Sin Fronteras">
+        </div>
+        <h1>Mochileros Sin Fronteras</h1>
+        <ul class="menu">
+            <li class="active"><a href="index.html">Inicio</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="#experiencias">Experiencias</a></li>
+            <li><a href="#consejos">Consejos</a></li>
+            <li><a href="#foro">Foro</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><select name="idioma" id="idioma">
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+  <div class="page">
+    
+    <div class="comprar-main">
+            <section class="comprar">
+            
+            <div>
+                <h1>Pack Sudeste Asiatico</h1>
+                <h1>600€</h1>  
+            </div>
+
+            <img src="images/Vietnam.jpeg" alt="Vietnam">
+            <div>
+                <h1>Descripcion del pack</h1>
+                <p>Disfruta una adventura maravillosa por tres paises en el SUdeste de Asia.
+                    En este pack, incluimos un bus que te llevara por las ciudades y la naturaleza
+                    de estos paises. Disfruta con otros viajadores que han comprado el mismo pack.
+                    Tambien inluye el alojamiento y comida durante el viaje.
+                </p>
+            </div>
+            
+        </section>
+
+        <section class="comprar">
+            <h1>Formulario de Compra</h1>
+            <form>
+                <label for="NombreCompleto">Nombre Completo</label>
+                <input type="text" id="NombreCompleto" name="NombreCompleto" required>
+                
+                <label for="CorreoElectronico">Correo Electronico</label>
+                <input type="text" id="CorreoElectronico" name="CorreoElectronico" required>
+
+                <label for="TipodeTarjeta">Tipo de Tarjeta</label>
+                <select id="TipodeTarjeta" name="TipodeTarjeta">
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="Google Pay">Google Pay</option>
+                </select>
+
+                <label for="NumerodeTarjeta">Numero de Tarjeta</label>
+                <input class="comprar-element" type="text" id="NumerodeTarjeta" name="NumerodeTarjeta" placeholder="xxxx xxxx xxxx xxxx ">
+
+                <label for="NombreTitular">Nombre del Titular de la Tarjeta</label>
+                <input class="comprar-element" type="text" id="NombreTitular" name="NombreTitular" placeholder="">
+
+                <label for="FechadeCaudacidad">Fecha de Caudacidad</label>
+                <input class="comprar-element" type="text" id="FechadeCaudacidad" name="FechadeCaudacidad" placeholder="dd/mm/yyyy">
+
+                <label for="CVV">CVV</label>
+                <input class="comprar-element" type="text" id="CVV" name="CVV" placeholder="CVV">
+
+                <a href="versionb.html" class="btn">Comprar</a>
+                <a href="versionb.html" class="btn">Borrar</a>
+
+
+            </form>
+        </section> 
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+        
+            <!-- Copyright -->
+            <div class="footer-copy">
+            <p>&copy; 2025 Mochileros Sin Fronteras. Todos los derechos reservados.</p>
+            </div>
+
+            <!-- Enlaces -->
+            <div class="footer-links">
+            <h3>Enlaces útiles</h3>
+            <ul>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="politica.html">Política de privacidad</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-social">
+            <h3>Síguenos</h3>
+            <a href="#"><img src="images/instagram.jpg" alt="Instagram"></a>
+            <a href="#"><img src="images/tiktok.webp" alt="TikTok"></a>
+            <a href="#"><img src="images/youtube.webp" alt="YouTube"></a>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+            <h3>Suscríbete</h3>
+            <form>
+                <input type="email" placeholder="Tu email" required>
+                <button type="submit">Enviar</button>
+            </form>
+            </div>
+
+        </div>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/fondo-mochileros.jpg");
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #1abc9c;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* ==== SECCIÓN DE REGISTRO ==== */
+#registro {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==== TÍTULO ==== */
+#registro h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+/* ==== FORMULARIO ==== */
+#registro form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==== LABELS ==== */
+#registro label {
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+/* ==== INPUTS ==== */
+#registro input {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#registro input:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 6px rgba(26, 188, 156, 0.4);
+}
+
+/* ==== BOTÓN ==== */
+#registro .btn {
+  margin-top: 20px;
+  padding: 12px;
+  background: #1abc9c;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+#registro .btn:hover {
+  background: #16a085;
+  transform: translateY(-2px);
+}
+
+#registro .btn:active {
+  transform: translateY(0);
+}
+
+
+/* ==== SECCIÓN DE POLÍTICA DE PRIVACIDAD ==== */
+#politica {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#politica h1, 
+#politica h2 {
+  color: #1abc9c;
+  margin-bottom: 15px;
+}
+
+#politica h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#politica h2 {
+  font-size: 1.3rem;
+  margin-top: 25px;
+}
+
+#politica p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+#politica a {
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#politica a:hover {
+  text-decoration: underline;
+}
+
+#politica ul {
+  margin: 10px 0 20px 20px;
+}
+
+#politica li {
+  margin-bottom: 10px;
+}
+
+.politica-box {
+  margin: 15px 0;
+  font-size: 0.9rem;
+  color: #34495e;
+}
+
+.politica-box input {
+  margin-right: 8px;
+}
+
+.politica-box a {
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.politica-box a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 500px) {
+  #registro {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  #registro h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  nav h1 {
+    flex-grow: unset;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  nav .menu {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav .menu li a {
+    display: block;
+  }
+
+   #politica {
+    padding: 20px;
+  }
+
+  #politica h1 {
+    font-size: 1.5rem;
+  }
+
+  #politica p {
+    font-size: 0.95rem;
+  }
+}

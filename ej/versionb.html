@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mochileros sin Fronteras</title>
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="./style/user-sidebar.css">
+  <link rel="stylesheet" href="./style/comprar.css">
+
+</head>
+
+
+
+<body>
+    <nav>
+    <div class="logo">
+        <img src="images/Logo.png" height=50 width=50 alt="Logo de Mochileros Sin Fronteras">
+    </div>
+    <h2>Mochileros Sin Fronteras</h2>
+    <ul class="menu">
+        <li class="active"><a href="index.html">Inicio</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="#experiencias">Experiencias</a></li>
+        <li><a href="#consejos">Consejos</a></li>
+        <li><a href="#foro">Foro</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><select name="idioma" id="idioma">
+                <option value="es">🇪🇸 Español</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="fr">🇫🇷 Français</option>
+            </select>
+        </li>
+    </ul>
+</nav>
+  <div class="page">
+
+    <main>
+        <div class="main-content">
+                
+                <div class="carousel">
+                    <div class="banner">
+                        <h1>
+                            Compra y descubre viajes muchileros a larga distancia   
+                        </h1>                 
+                    </div>
+                    <div class="carousel-body">
+                        
+                        <button><img class="arrow-img" src="images/free-arrow-left-icon-3099-thumb.png" alt="left-arrow"></button>
+
+                        <div class="carousel-card">
+                            
+                            <img src="images/Mexico.jpg" alt="Mexico">
+                            
+                            <div class="carousel-card-body">
+                                <h1>Pack Sudeste Asiatico 600$</h1>
+                                <p>Vietnam y Cambodia, buses, hostales y guia de visados</p>
+                                <a class="btn" href="comprar.html">Comprar</a>
+                            </div>
+                        </div>
+                        <button>
+                            <img class="arrow-img" src="images/free-arrow-right-icon-3099-thumb.png" alt="right-arrow">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="experiences">
+                    
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="card-img" src="images/Kathmandu-Nepal.jpg" alt="Nepal">
+                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                        </div>
+
+                        <div class="card-body">
+                            <h1 class="card-header">Kathmandu-Nepal</h1>
+                            <a href="registro.html">Ver más</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="card-img" src="images/india.jpeg" alt="India">
+                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                        </div>
+
+                        <div class="card-body">
+                            <h1 class="card-header">India</h1>
+                            <a href="registro.html">Ver más</a>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="card-img" src="images/Vietnam.jpeg" alt="Vietnam">
+                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                        </div>
+
+                        <div class="card-body">
+                            <h1 class="card-header">Vietnam</h1>
+                            <a href="registro.html">Ver más</a>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="card-img" src="images/Machu_Picchu.jpg" alt="Perú">
+                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                        </div>
+
+                        <div class="card-body">
+                            <h1 class="card-header">Perú</h1>
+                            <a href="registro.html">Ver más</a>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="card-img" src="images/Tanzania.jpeg" alt="Tanzania">
+                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                        </div>
+
+                        <div class="card-body">
+                            <h1 class="card-header">Tanzania</h1>
+                            <a href="registro.html">Ver más</a>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="card-img" src="images/Mexico.jpg" alt="Mexico">
+                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                        </div>
+
+                        <div class="card-body">
+                            <h1 class="card-header">México</h1>
+                            <a href="registro.html">Ver más</a>
+
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+
+        <div id="side-bar">
+
+            <div class="segment">
+                <h1>John Smith</h1>
+                <img src="images/user.png" alt="user">
+            </div>
+
+            <a class="btn" href="">Cerrar Session</a>
+
+            <h1>Busca Experencias</h1>
+            
+            <div>
+                <label for="NorteAmerica">Norte America</label>
+                <input type="checkbox" id="NorteAmerica" name="Norte America" required>
+            </div>
+
+            <div>
+                <label for="SurAmerica">Sur America</label>
+                <input type="checkbox" id="SurAmerica" name="Sur America" required>
+            </div>
+
+            <div>
+                <label for="Asia">Asia</label>
+                <input type="checkbox" id="Asia" name="Asia" required>
+            </div>
+
+            <div>
+                <label for="Europa">Europa</label>
+                <input type="checkbox" id="Europa" name="Europa" required>
+            </div>
+
+            <input type="text" placeholder="Search">
+
+            <h1>Ultimos Consejos</h1>
+            <p>Como ahorrar dinero</p>
+            <p>Viajar con Seguro</p>        
+            <h1>Tenes algun consejo?</h1>
+                                                                    
+            <input type="text" placeholder="Titulo">
+            <input type="text" placeholder="Descripcion">
+            <a href="" class="btn">Enviar</a>
+
+
+            <div class="calendar">
+                <div class="month">
+                    <h1>September 2025</h1>
+                </div>
+                <div class="weekdays">
+                    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                </div>
+                <div class="days">
+                    <div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+                    <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div>
+                    <div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div>
+                    <div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div>
+                    <div>28</div><div>29</div><div>30</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+  </div>
+<footer>
+    <div class="footer-container">
+    
+        <!-- Copyright -->
+        <div class="footer-copy">
+        <p>&copy; 2025 Mochileros Sin Fronteras. Todos los derechos reservados.</p>
+        </div>
+
+        <!-- Enlaces -->
+        <div class="footer-links">
+        <h3>Enlaces útiles</h3>
+        <ul>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="politica.html">Política de privacidad</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-social">
+        <h3>Síguenos</h3>
+        <a href="#"><img src="images/instagram.jpg" alt="Instagram"></a>
+        <a href="#"><img src="images/tiktok.webp" alt="TikTok"></a>
+        <a href="#"><img src="images/youtube.webp" alt="YouTube"></a>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+        <h3>Suscríbete</h3>
+        <form>
+            <input type="email" placeholder="Tu email" required>
+            <button type="submit">Enviar</button>
+        </form>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+
+</html>

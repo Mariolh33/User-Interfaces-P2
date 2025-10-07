@@ -1,0 +1,175 @@
+.comprar-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/fondo-mochileros.jpg");
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #1abc9c;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* ==== SECCIÓN DE COMPRAR ==== */
+.comprar {
+  max-width: 100%;
+  margin: 30px;
+  padding: 30px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.comprar div{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==== TÍTULO ==== */
+.comprar h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+/* ==== FORMULARIO ==== */
+.comprar form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==== LABELS ==== */
+.comprar label {
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+/* ==== INPUTS ==== */
+.comprar input {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comprar input:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 6px rgba(26, 188, 156, 0.4);
+}
+
+/* ==== INPUTS ==== */
+.comprar select {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ==== BOTÓN ==== */
+.comprar .btn {
+  margin-top: 20px;
+  padding: 12px;
+  background: #1abc9c;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.comprar .btn:hover {
+  background: #16a085;
+  transform: translateY(-2px);
+}
+
+.comprar .btn:active {
+  transform: translateY(0);
+}
+
+
+/* ==== RESPONSIVE ==== */
+
+/* Celular */
+
+@media (max-width: 600px) {
+  #comprar {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  #comprar h1 {
+    font-size: 1.5rem;
+  }
+
+  .comprar-main{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/* ==== RESPONSIVE ==== */
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  nav h1 {
+    flex-grow: unset;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  nav .menu {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav .menu li a {
+    display: block;
+  }
+
+   #politica {
+    padding: 20px;
+  }
+
+  #politica h1 {
+    font-size: 1.5rem;
+  }
+
+  #politica p {
+    font-size: 0.95rem;
+  }
+}

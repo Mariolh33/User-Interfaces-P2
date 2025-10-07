@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochileros Sin Fronteras</title>
+    <link rel="stylesheet" href="./style/registro.css">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+
+
+<body>
+    <nav>
+    <div class="logo">
+        <img src="images/Logo.png" height=50 width=50 alt="Logo de Mochileros Sin Fronteras">
+    </div>
+    <h1>Mochileros Sin Fronteras</h1>
+    <ul class="menu">
+        <li class="active"><a href="index.html">Inicio</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="#experiencias">Experiencias</a></li>
+        <li><a href="#consejos">Consejos</a></li>
+        <li><a href="#foro">Foro</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><select name="idioma" id="idioma">
+                <option value="es">🇪🇸 Español</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="fr">🇫🇷 Français</option>
+            </select>
+        </li>
+    </ul>
+</nav>
+    <!--- Formulario de Registro -->
+    <section id="registro">
+        <h1>Regístrate</h1>
+        <form>
+            <!-- Campos del formulario (required indica que si no se pone el campo necesario no se puede registrar uno) -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="confirmar-email">Confirmar Email:</label>
+            <input type="email" id="confirmar-email" name="confirmar-email" required>
+            
+            <label for ="fecha-nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <!-- Checkbox para aceptar la política de privacidad-->
+            <div class="politica-box">
+                <input type="checkbox" id="acepto" name="acepto" required>
+                <label for="acepto">Acepto la <a href="politica.html">Política de Privacidad</a>
+                </label>
+                </div>
+
+            <a href="versionb.html" class="btn">Registrarse</a>
+        </form>
+    </section>  
+   <footer>
+        <div class="footer-container">
+        
+            <!-- Copyright -->
+            <div class="footer-copy">
+            <p>&copy; 2025 Mochileros Sin Fronteras. Todos los derechos reservados.</p>
+            </div>
+
+            <!-- Enlaces -->
+            <div class="footer-links">
+            <h3>Enlaces útiles</h3>
+            <ul>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="politica.html">Política de privacidad</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-social">
+            <h3>Síguenos</h3>
+            <a href="#"><img src="images/instagram.jpg" alt="Instagram"></a>
+            <a href="#"><img src="images/tiktok.webp" alt="TikTok"></a>
+            <a href="#"><img src="images/youtube.webp" alt="YouTube"></a>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+            <h3>Suscríbete</h3>
+            <form>
+                <input type="email" placeholder="Tu email" required>
+                <button type="submit">Enviar</button>
+            </form>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
+
+
