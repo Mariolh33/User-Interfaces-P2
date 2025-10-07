@@ -67,6 +67,36 @@ body {
   box-shadow: 0 0 6px rgba(26, 188, 156, 0.4);
 }
 
+/* ==== CAMPO DE FOTO DE PERFIL ==== */
+#registro input[type="file"] {
+  padding: 8px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#registro input[type="file"]:hover {
+  border-color: #1abc9c;
+}
+
+#registro input[type="file"]::file-selector-button {
+  background: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#registro input[type="file"]::file-selector-button:hover {
+  background: #16a085;
+}
+
+
 /* ==== BOTÓN ==== */
 #registro .btn {
   margin-top: 20px;
