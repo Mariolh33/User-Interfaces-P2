@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style/experiences.css">
     <link rel="stylesheet" href="./style/sidebar.css">
     <link rel="stylesheet" href="./style/carousel.css">
+    <script type="text/javascript" src="script/carousel.js"></script>
 </head>
 
 
@@ -32,169 +33,170 @@
         </li>
     </ul>
     </nav>
-  <div class="page">
-        <main>
-            <div class="main-content">
-                
-                <div class="carousel">
-                    <div class="banner">
-                        <h1>
-                            Compra y descubre viajes muchileros a larga distancia   
-                        </h1>                 
-                    </div>
-                    <div class="carousel-body">
+
+    <main>
+        <div class="main-content">  
+            <div class="carousel">
+                <div class="banner">
+                    <h1>
+                        Compra y descubre viajes muchileros a larga distancia   
+                    </h1>                 
+                </div>
+                <div id="carousel" class="carousel-body">
+
+                    <button onclick="changeCarouselLeft()">
+                        <img class="arrow-img" src="images/free-arrow-left-icon-3099-thumb.png" alt="left-arrow">
+                    </button>
+
+                    <div class="carousel-card">
                         
-                        <button><img class="arrow-img" src="images/free-arrow-left-icon-3099-thumb.png" alt="left-arrow"></button>
-
-                        <div class="carousel-card">
-                            
-                            <img src="images/Mexico.jpg" alt="Mexico">
-                            
-                            <div class="carousel-card-body">
-                                <h1>Pack Sudeste Asiatico 600$</h1>
-                                <p>Vietnam y Cambodia, buses, hostales y guia de visados</p>
-                                <a href="comprar.html">Comprar</a>
-                            </div>
-                        </div>
-                        <button>
-                            <img class="arrow-img" src="images/free-arrow-right-icon-3099-thumb.png" alt="right-arrow">
-                        </button>
-                    </div>
-                </div>
-
-                <div class="experiences">
-                    
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/Kathmandu-Nepal.jpg" alt="Nepal">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">Kathmandu-Nepal</h1>
-                            <a href="registro.html">Ver más</a>
+                        <img id="carousel-img" src="images/Mexico.jpg" alt="Mexico">
+                        
+                        <div class="carousel-card-body">
+                            <h1 id="carousel-title">Pack Sudeste Asiatico 600$</h1>
+                            <p id="carousel-desc">Vietnam y Cambodia, buses, hostales y guia de visados</p>
+                            <a href="comprar.html">Comprar</a>
                         </div>
                     </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/india.jpeg" alt="India">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">India</h1>
-                            <a href="registro.html">Ver más</a>
-
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/Vietnam.jpeg" alt="Vietnam">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">Vietnam</h1>
-                            <a href="registro.html">Ver más</a>
-
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/Machu_Picchu.jpg" alt="Perú">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">Perú</h1>
-                            <a href="registro.html">Ver más</a>
-
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/Tanzania.jpeg" alt="Tanzania">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">Tanzania</h1>
-                            <a href="registro.html">Ver más</a>
-
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/Mexico.jpg" alt="Mexico">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">México</h1>
-                            <a href="registro.html">Ver más</a>
-
-                        </div>
-                    </div>
-                   
+                    <button onclick="changeCarouselRight()">
+                        <img class="arrow-img" src="images/free-arrow-right-icon-3099-thumb.png" alt="right-arrow">
+                    </button>
                 </div>
             </div>
 
+            <div class="experiences">
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/Kathmandu-Nepal.jpg" alt="Nepal">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
 
-            <div id="side-bar">
-                <div class="authentication-form">
-                    <h1>Iniciar Sesion</h1>
-                    <form>
-                        <label for="username">Nombre de Usuario:</label>
-                        <input class="authentication-form" type="text" id="username" name="username" required>
-                        <label for="password">Contraseña:</label>
-                        <input class="authentication-form" type="password" id="password" name="password" required>
-                    </form>
+                    <div class="card-body">
+                        <h1 class="card-header">Kathmandu-Nepal</h1>
+                        <a href="registro.html">Ver más</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/india.jpeg" alt="India">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">India</h1>
+                        <a href="registro.html">Ver más</a>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/Vietnam.jpeg" alt="Vietnam">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">Vietnam</h1>
+                        <a href="registro.html">Ver más</a>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/Machu_Picchu.jpg" alt="Perú">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">Perú</h1>
+                        <a href="registro.html">Ver más</a>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/Tanzania.jpeg" alt="Tanzania">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">Tanzania</h1>
+                        <a href="registro.html">Ver más</a>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/Mexico.jpg" alt="Mexico">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">México</h1>
+                        <a href="registro.html">Ver más</a>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div id="side-bar">
+            <div class="authentication-form">
+                <h1>Iniciar Sesion</h1>
+                <form>
+                    <label for="username">Nombre de Usuario:</label>
+                    <input class="authentication-form" type="text" id="username" name="username" required>
+                    <label for="password">Contraseña:</label>
+                    <input class="authentication-form" type="password" id="password" name="password" required>
+                </form>
+                <div>
+                    <label>Recordar Credenciales</label>
+                    <input type="checkbox">
+                </div>
+
+                <div class="authentication-buttons">
+                    <a href="versionb.html" class="btn">Iniciar Sesión</a>
+                    <a href="registro.html" class="btn">Registrarse</a>
+                </div>
+            </div>
+
+            <div class="selection-list">
+                <div class="selection-item">
+                    <h1>Top Destinos mochileros</h1>
                     <div>
-                        <label>Recordar Credenciales</label>
-                        <input type="checkbox">
-                    </div>
-    
-                    <div class="authentication-buttons">
-                        <a href="versionb.html" class="btn">Iniciar Sesión</a>
-                        <a href="registro.html" class="btn">Registrarse</a>
+                        <a href="">Tailandia</a>
+                        <a href="">Bolivia</a>
+                        <a href="">Nepal</a>
                     </div>
                 </div>
-
-                <div class="selection-list">
-                    <div class="selection-item">
-                        <h1>Top Destinos mochileros</h1>
-                        <div>
-                            <a href="">Tailandia</a>
-                            <a href="">Bolivia</a>
-                            <a href="">Nepal</a>
-                        </div>
+                <div class="selection-item">
+                    <h1>Consejos Rapidos</h1>
+                    <div>
+                        <a href="">LLeva seguro medico</a>
+                        <a href="">Informate sobre visados</a>
+                        <a href="">Viaje ligero</a>
                     </div>
-                    <div class="selection-item">
-                        <h1>Consejos Rapidos</h1>
-                        <div>
-                            <a href="">LLeva seguro medico</a>
-                            <a href="">Informate sobre visados</a>
-                            <a href="">Viaje ligero</a>
-                        </div>
-                    </div>
-                    <div class="selection-item">
-                        <h1>Proximos encuentros</h1>
-                        <div>
-                            <a href="">Madrid 12/10</a>
-                            <a href="">Barcelona 25/10</a>
-                            <a href="">Valencia 08/11</a>
-                        </div>
-                    </div>
-                    
                 </div>
+                <div class="selection-item">
+                    <h1>Proximos encuentros</h1>
+                    <div>
+                        <a href="">Madrid 12/10</a>
+                        <a href="">Barcelona 25/10</a>
+                        <a href="">Valencia 08/11</a>
+                    </div>
+                </div>
+                
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+
     <footer>
         <div class="footer-container">
         
