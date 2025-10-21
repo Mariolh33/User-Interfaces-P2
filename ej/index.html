@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style/sidebar.css">
     <link rel="stylesheet" href="./style/carousel.css">
     <script type="text/javascript" src="script/carousel.js"></script>
+    <script type="text/javascript" src="script/versionb.js"></script>
 </head>
 
 
@@ -39,7 +40,7 @@
             <div class="carousel">
                 <div class="banner">
                     <h1>
-                        Compra y descubre viajes muchileros a larga distancia   
+                        Compra y descubre viajes mochileros a larga distancia   
                     </h1>                 
                 </div>
                 <div id="carousel" class="carousel-body">
@@ -151,10 +152,10 @@
             <div class="authentication-form">
                 <h1>Iniciar Sesion</h1>
                 <form>
-                    <label for="username">Nombre de Usuario:</label>
-                    <input class="authentication-form" type="text" id="username" name="username" required>
-                    <label for="password">Contraseña:</label>
-                    <input class="authentication-form" type="password" id="password" name="password" required>
+                    <label for="usernameLogin">Nombre de Usuario:</label>
+                    <input class="authentication-form" type="text" id="usernameLogin" name="usernameLogin" required>
+                    <label for="passwordLogin">Contraseña:</label>
+                    <input class="authentication-form" type="password" id="passwordLogin" name="passwordLogin" required>
                 </form>
                 <div>
                     <label>Recordar Credenciales</label>
@@ -162,7 +163,7 @@
                 </div>
 
                 <div class="authentication-buttons">
-                    <a href="versionb.html" class="btn">Iniciar Sesión</a>
+                    <a onclick="iniciarSesion()" class="btn">Iniciar Sesión</a>
                     <a href="registro.html" class="btn">Registrarse</a>
                 </div>
             </div>

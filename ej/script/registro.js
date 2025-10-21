@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const boton = document.getElementById("btnRegistrar");
   const mensaje = document.getElementById("mensaje");
 
-  // Habilitar/deshabilitar botón según el checkbox
+  // Deshabilitar botón hasta que acepte política
   aceptar.addEventListener("change", () => {
     boton.disabled = !aceptar.checked;
   });
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault(); // Evitar envío por defecto
+    e.preventDefault();
     mensaje.textContent = "";
     mensaje.style.color = "red";
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = document.getElementById("password").value;
     const foto = document.getElementById("foto-perfil").files[0];
 
-    // Validaciones
+    // === VALIDACIONES ===
     if (nombre.length < 3) return mostrarError("El nombre debe tener al menos 3 caracteres.");
     if (!/^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,}$/.test(nombre)) return mostrarError("El nombre solo puede contener letras.");
 
@@ -59,25 +59,43 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!aceptar.checked)
       return mostrarError("Debe aceptar la política de privacidad.");
 
-    // Si todo es correcto
-    const usuario = {
-      nombre,
-      apellido,
-      email,
-      fechaNacimiento,
-      username,
-      password,
-      foto: foto.name
+    // === SI TODO ES CORRECTO ===
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      // Guardar imagen codificada en base64
+      const fotoBase64 = e.target.result;
+
+      let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+      if (usuarios == null) {
+        usuarios = [];		
+      } 
+      const usuario = {
+        nombre,
+        apellido,
+        email,
+        fechaNacimiento,
+        username,
+        password,
+        foto: fotoBase64 //  guardamos la imagen real codificada
+      };
+
+      usuarios.push(usuario);
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+      sessionStorage.setItem("usuarioLogueado", username);
+
+      // Marcar sesión como válida
+      sessionStorage.setItem("loginValido", "true");
+
+      mensaje.style.color = "green";
+      mensaje.textContent = "✅ Registro completado correctamente. Redirigiendo...";
+
+      setTimeout(() => {
+        window.location.href = "versionb.html";
+      }, 1500);
     };
 
-    localStorage.setItem("usuarioRegistrado", JSON.stringify(usuario));
-
-    mensaje.style.color = "green";
-    mensaje.textContent = "✅ Registro completado correctamente. Redirigiendo...";
-
-    setTimeout(() => {
-      window.location.href = "versionb.html";
-    }, 1500);
+    reader.readAsDataURL(foto); // convierte la imagen en base64
   });
 
   function mostrarError(texto) {
