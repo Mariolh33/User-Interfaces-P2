@@ -37,8 +37,6 @@ function navigateToBuy(){
 
 function updateCarousel(){
     const pack = packs[currentIndex]
-    console.log(pack)
-
     document.getElementById("carousel-img").src = pack.img;
     document.getElementById("carousel-title").textContent = pack.title;
     document.getElementById("carousel-desc").textContent = pack.descShort;

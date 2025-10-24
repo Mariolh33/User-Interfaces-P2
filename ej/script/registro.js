@@ -42,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const edad = hoy.getFullYear() - fecha.getFullYear();
       if (fecha > hoy || edad < 10 || edad > 120)
         return mostrarError("Introduce una fecha de nacimiento válida.");
+    } else {
+      return mostrarError("Introduce una fecha de nacimiento.");
     }
 
     if (username.length < 5)

@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", (e) => {
 
-        console.log("cheese");
-
         e.preventDefault();
         mensaje.textContent = "";
         mensaje.style.color = "red";
@@ -57,7 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const hoy = new Date();
         const edad = hoy.getFullYear() - fecha.getFullYear();
         if (fecha <= hoy)
-            return mostrarError("Introduce una fecha de nacimiento válida.");
+            return mostrarError("Introduce una fecha de caudacidad válida.");
+        } else {
+            return mostrarError("Introduce una fecha de caudacidad.");
         }
 
         if (cvv.length !== 3) return mostrarError("CVV debe ser 3 digitos");
@@ -71,6 +71,12 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "versionb.html";
             }, 1500);
     })
+
+    // Clear form when Borrar is clicked
+    botonBorrar.addEventListener("click", () => {
+        form.reset();          
+        return mostrarError("La forma a sido borrada")
+    });
 
     function mostrarError(texto) {
         mensaje.textContent = texto;
