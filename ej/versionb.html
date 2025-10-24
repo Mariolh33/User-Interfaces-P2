@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="./style/user-sidebar.css">
   <link rel="stylesheet" href="./style/comprar.css">
   <script type="text/javascript" src="script/versionb.js"></script>
+  <script type="text/javascript" src="script/carousel.js"></script>
+
 
 </head>
 
@@ -35,115 +37,116 @@
   <div class="page">
 
     <main>
-        <div class="main-content">
-                
-                <div class="carousel">
-                    <div class="banner">
-                        <h1>
-                            Compra y descubre viajes mochileros a larga distancia   
-                        </h1>                 
-                    </div>
-                    <div class="carousel-body">
-                        
-                        <button><img class="arrow-img" src="images/free-arrow-left-icon-3099-thumb.png" alt="left-arrow"></button>
-
-                        <div class="carousel-card">
-                            
-                            <img src="images/Mexico.jpg" alt="Mexico">
-                            
-                            <div class="carousel-card-body">
-                                <h1>Pack Sudeste Asiatico 600$</h1>
-                                <p>Vietnam y Cambodia, buses, hostales y guia de visados</p>
-                                <a class="btn" href="comprar.html">Comprar</a>
-                            </div>
-                        </div>
-                        <button>
-                            <img class="arrow-img" src="images/free-arrow-right-icon-3099-thumb.png" alt="right-arrow">
-                        </button>
-                    </div>
+        <div class="main-content">  
+            <div class="carousel">
+                <div class="banner">
+                    <h1>
+                        Compra y descubre viajes mochileros a larga distancia   
+                    </h1>                 
                 </div>
+                <div id="carousel" class="carousel-body">
 
-                <div class="experiences">
-                    
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/Kathmandu-Nepal.jpg" alt="Nepal">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
+                    <button onclick="changeCarouselLeft()">
+                        <img class="arrow-img" src="images/free-arrow-left-icon-3099-thumb.png" alt="left-arrow">
+                    </button>
 
-                        <div class="card-body">
-                            <h1 class="card-header">Kathmandu-Nepal</h1>
-                            <a href="registro.html">Ver más</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/india.jpeg" alt="India">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">India</h1>
-                            <a href="registro.html">Ver más</a>
-
+                    <div class="carousel-card">
+                        
+                        <img id="carousel-img" src="images/Mexico.jpg" alt="Mexico">
+                        
+                        <div class="carousel-card-body">
+                            <h1 id="carousel-title">Pack Sudeste Asiatico 600$</h1>
+                            <p id="carousel-desc">Vietnam y Cambodia, buses, hostales y guia de visados</p>
+                            <button class="btn" onclick="navigateToBuy()">Comprar</button>
                         </div>
                     </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/Vietnam.jpeg" alt="Vietnam">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">Vietnam</h1>
-                            <a href="registro.html">Ver más</a>
-
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/Machu_Picchu.jpg" alt="Perú">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">Perú</h1>
-                            <a href="registro.html">Ver más</a>
-
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/Tanzania.jpeg" alt="Tanzania">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">Tanzania</h1>
-                            <a href="registro.html">Ver más</a>
-
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="card-img" src="images/Mexico.jpg" alt="Mexico">
-                            <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
-                        </div>
-
-                        <div class="card-body">
-                            <h1 class="card-header">México</h1>
-                            <a href="registro.html">Ver más</a>
-
-                        </div>
-                    </div>
-                   
+                    <button onclick="changeCarouselRight()">
+                        <img class="arrow-img" src="images/free-arrow-right-icon-3099-thumb.png" alt="right-arrow">
+                    </button>
                 </div>
             </div>
+
+            <div class="experiences">
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/Kathmandu-Nepal.jpg" alt="Nepal">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">Kathmandu-Nepal</h1>
+                        <a href="registro.html">Ver más</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/india.jpeg" alt="India">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">India</h1>
+                        <a href="registro.html">Ver más</a>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/Vietnam.jpeg" alt="Vietnam">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">Vietnam</h1>
+                        <a href="registro.html">Ver más</a>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/Machu_Picchu.jpg" alt="Perú">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">Perú</h1>
+                        <a href="registro.html">Ver más</a>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/Tanzania.jpeg" alt="Tanzania">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">Tanzania</h1>
+                        <a href="registro.html">Ver más</a>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="images/Mexico.jpg" alt="Mexico">
+                        <a href="registro.html"><img src="images/heart-icon.png" alt="heart"></a>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="card-header">México</h1>
+                        <a href="registro.html">Ver más</a>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
 
 
         <div id="side-bar">

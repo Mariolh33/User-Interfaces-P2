@@ -224,6 +224,8 @@ nav .menu select option {
   align-items: center;
 }
 
+
+
 .carousel-card img{
   border-radius: 8px 8px 0 0;
   width: 100%;
@@ -240,8 +242,7 @@ nav .menu select option {
 }
 
 .carousel-card .btn {
-  margin-top: 20px;
-  padding: 12px;
+  padding: 12px 50px;
   background: #1abc9c;
   color: white;
   font-size: 1rem;
