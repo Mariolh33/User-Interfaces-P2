@@ -35,7 +35,7 @@
   <div class="page">
     
     <div class="comprar-main">
-            <section class="comprar">
+        <section class="comprar">
             
             <div>
                 <h1 id="pack-title"></h1>
@@ -52,7 +52,7 @@
 
         <section class="comprar">
             <h1>Formulario de Compra</h1>
-            <form>
+            <form id="comprarForm">
                 <label for="NombreCompleto">Nombre Completo</label>
                 <input type="text" id="NombreCompleto" name="NombreCompleto" required>
                 
@@ -73,13 +73,16 @@
                 <input class="comprar-element" type="text" id="NombreTitular" name="NombreTitular" placeholder="">
 
                 <label for="FechadeCaudacidad">Fecha de Caudacidad</label>
-                <input class="comprar-element" type="text" id="FechadeCaudacidad" name="FechadeCaudacidad" placeholder="dd/mm/yyyy">
+                <input class="comprar-element" type="date" id="FechadeCaudacidad" name="FechadeCaudacidad" placeholder="dd/mm/yyyy">
 
                 <label for="CVV">CVV</label>
                 <input class="comprar-element" type="text" id="CVV" name="CVV" placeholder="CVV">
 
-                <a href="versionb.html" class="btn">Comprar</a>
-                <a href="versionb.html" class="btn">Borrar</a>
+                <!-- display message, return to versionb.html -->
+
+                <button type="submit" id="btnComprar" class="btn">Comprar</button>
+                <button type="submit" id="btnBorrar" class="btn">Borrar</button>
+                <p id="mensaje" style="margin-top: 10px; font-weight: bold;"></p>
 
 
             </form>
