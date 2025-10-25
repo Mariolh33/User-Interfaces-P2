@@ -4,9 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const boton = document.getElementById("btnRegistrar");
   const mensaje = document.getElementById("mensaje");
 
-  // Deshabilitar botón hasta que acepte política
+  // 🔸 Deshabilitar botón hasta que acepte la política
+  boton.disabled = !aceptar.checked;
   aceptar.addEventListener("change", () => {
     boton.disabled = !aceptar.checked;
+
+    // Muestra mensaje dinámico si desmarca
+    if (!aceptar.checked) {
+      mostrarError("Debes aceptar la política de privacidad para continuar.");
+    } else {
+      mensaje.textContent = "";
+    }
   });
 
   form.addEventListener("submit", (e) => {
@@ -25,53 +33,49 @@ document.addEventListener("DOMContentLoaded", () => {
     const foto = document.getElementById("foto-perfil").files[0];
 
     // === VALIDACIONES ===
-    if (nombre.length < 3) return mostrarError("El nombre debe tener al menos 3 caracteres.");
-    if (!/^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,}$/.test(nombre)) return mostrarError("El nombre solo puede contener letras.");
+    if (nombre.length < 3) return mostrarError("❌ El nombre debe tener al menos 3 caracteres.");
+    if (!/^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,}$/.test(nombre)) return mostrarError("❌ El nombre solo puede contener letras.");
 
     const apellidos = apellido.split(" ");
     if (apellidos.length < 2 || apellidos.some(a => a.length < 3))
-      return mostrarError("El apellido debe contener al menos dos palabras de 3 caracteres cada una.");
+      return mostrarError("❌ El apellido debe contener al menos dos palabras de 3 caracteres cada una.");
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) return mostrarError("El email no tiene un formato válido.");
-    if (email !== confirmarEmail) return mostrarError("Los correos no coinciden.");
+    if (!emailRegex.test(email)) return mostrarError("❌ El email no tiene un formato válido.");
+    if (email !== confirmarEmail) return mostrarError("❌ Los correos no coinciden.");
 
     if (fechaNacimiento) {
       const fecha = new Date(fechaNacimiento);
       const hoy = new Date();
       const edad = hoy.getFullYear() - fecha.getFullYear();
       if (fecha > hoy || edad < 10 || edad > 120)
-        return mostrarError("Introduce una fecha de nacimiento válida.");
+        return mostrarError("❌ Introduce una fecha de nacimiento válida.");
     } else {
-      return mostrarError("Introduce una fecha de nacimiento.");
+      return mostrarError("❌ Introduce una fecha de nacimiento.");
     }
 
     if (username.length < 5)
-      return mostrarError("El nombre de usuario debe tener al menos 5 caracteres.");
+      return mostrarError("❌ El nombre de usuario debe tener al menos 5 caracteres.");
 
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=(?:.*\d){2,})(?=.*[^A-Za-z0-9]).{8,}$/;
     if (!passwordRegex.test(password))
-      return mostrarError("La contraseña debe tener al menos 8 caracteres, 2 números, 1 símbolo, 1 mayúscula y 1 minúscula.");
+      return mostrarError("❌ La contraseña debe tener al menos 8 caracteres, 2 números, 1 símbolo, 1 mayúscula y 1 minúscula.");
 
-    if (!foto) return mostrarError("Debe seleccionar una foto de perfil.");
+    if (!foto) return mostrarError("❌ Debe seleccionar una foto de perfil.");
     const extensionesPermitidas = ["image/webp", "image/png", "image/jpeg"];
     if (!extensionesPermitidas.includes(foto.type))
-      return mostrarError("Formato de imagen no válido. Solo se permiten .webp, .png y .jpg.");
+      return mostrarError("❌ Formato de imagen no válido. Solo se permiten .webp, .png y .jpg.");
 
     if (!aceptar.checked)
-      return mostrarError("Debe aceptar la política de privacidad.");
+      return mostrarError("❌ Debes aceptar la política de privacidad antes de continuar.");
 
     // === SI TODO ES CORRECTO ===
     const reader = new FileReader();
 
-    reader.onload = function(e) {
-      // Guardar imagen codificada en base64
+    reader.onload = function (e) {
       const fotoBase64 = e.target.result;
+      let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-      let usuarios = JSON.parse(localStorage.getItem("usuarios"));
-      if (usuarios == null) {
-        usuarios = [];		
-      } 
       const usuario = {
         nombre,
         apellido,
@@ -79,14 +83,12 @@ document.addEventListener("DOMContentLoaded", () => {
         fechaNacimiento,
         username,
         password,
-        foto: fotoBase64 //  guardamos la imagen real codificada
+        foto: fotoBase64
       };
 
       usuarios.push(usuario);
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
       sessionStorage.setItem("usuarioLogueado", username);
-
-      // Marcar sesión como válida
       sessionStorage.setItem("loginValido", "true");
 
       mensaje.style.color = "green";
@@ -97,10 +99,24 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1500);
     };
 
-    reader.readAsDataURL(foto); // convierte la imagen en base64
+    reader.readAsDataURL(foto);
   });
 
+  // === FUNCIÓN PARA MOSTRAR ERRORES ===
   function mostrarError(texto) {
     mensaje.textContent = texto;
+    mensaje.style.color = "red";
+    mensaje.style.fontWeight = "bold";
+    mensaje.style.animation = "parpadeo 0.3s ease-in-out 2";
   }
+
+  // Pequeña animación opcional de parpadeo para errores
+  const estilo = document.createElement("style");
+  estilo.textContent = `
+    @keyframes parpadeo {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+  `;
+  document.head.appendChild(estilo);
 });
