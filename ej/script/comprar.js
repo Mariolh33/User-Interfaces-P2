@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return mostrarError("Selecciona un tipo de tarjeta válido");
         }
 
-        // longitude de tarjeta
+        // longitud de tarjeta
         if (numerodeTarjeta.length !== 13 && numerodeTarjeta.length !== 15 && numerodeTarjeta.length !== 16 && numerodeTarjeta.length !== 19){
             return mostrarError("El número de tarjeta tiene una longitud incorrecta.");
         }

@@ -41,9 +41,23 @@ function iniciarSesion() {
 
 
 function cerrarSesion() {
-	sessionStorage.setItem("loginValido", false);
-  window.location.href = "index.html";
+  const popup = document.getElementById("popupCerrarSesion");
+  popup.style.display = "flex";
+
+  const confirmar = document.getElementById("confirmarCerrar");
+  const cancelar = document.getElementById("cancelarCerrar");
+
+  confirmar.onclick = () => {
+    sessionStorage.setItem("loginValido", "false");
+    sessionStorage.removeItem("usuarioLogueado");
+    window.location.href = "index.html";
+  };
+
+  cancelar.onclick = () => {
+    popup.style.display = "none";
+  };
 }
+
 
 function validaSesion() {
 	if (sessionStorage.getItem("loginValido") != "true") {
