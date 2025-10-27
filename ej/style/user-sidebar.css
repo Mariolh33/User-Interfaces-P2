@@ -20,6 +20,60 @@
   gap: 10px;        
 }
 
+/* ==== FORMULARIO ==== */
+.consejoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* ==== INPUTS ==== */
+.consejoForm input {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consejoForm input:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 6px rgba(26, 188, 156, 0.4);
+}
+
+/* ==== INPUTS ==== */
+.consejoForm select {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ==== BOTÓN ==== */
+.consejoForm .btn {
+  padding: 12px;
+  background: #1abc9c;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.consejoForm .btn:hover {
+  background: #16a085;
+  transform: translateY(-2px);
+}
+
+.consejoForm .btn:active {
+  transform: translateY(0);
+}
+
 /* CSS que se usa para el calendario y sus divisiones */
 
 .month {

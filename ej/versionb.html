@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./style/comprar.css">
   <script type="text/javascript" src="script/versionb.js"></script>
   <script type="text/javascript" src="script/carousel.js"></script>
+  <script type="text/javascript" src="script/consejos.js"></script>
 
 
 </head>
@@ -192,13 +193,25 @@
             <input type="text" placeholder="Search">
 
             <h1>Ultimos Consejos</h1>
-            <p>Como ahorrar dinero</p>
-            <p>Viajar con Seguro</p>        
-            <h1>Tenes algun consejo?</h1>
-                                                                    
-            <input type="text" placeholder="Titulo">
-            <input type="text" placeholder="Descripcion">
-            <a href="" class="btn">Enviar</a>
+
+            <div id="consejos">
+                <h1 id="consejos1Titulo"></h1>
+                <p id="consejos1Descripcion"></p>
+
+                <h1 id="consejos2Titulo"></h1>
+                <p id="consejos2Descripcion"></p> 
+
+                <h1 id="consejos3Titulo"></h1>
+                <p id="consejos3Descripcion"></p> 
+            </div>
+
+            <form class = "consejoForm" id="consejoForm">
+                <h1>Tenes algun consejo?</h1>                                                    
+                <input type="text" id="consejoTitulo" placeholder="Titulo">
+                <input type="text" id="consejoDescripcion" placeholder="Descripcion">
+                <button type="submit" id="btnConsejo" class="btn">Enviar</button>
+                <p id="consejoError" style="margin-top: 10px; font-weight: bold;"></p>
+            </form>
 
 
             <div class="calendar">

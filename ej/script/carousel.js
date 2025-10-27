@@ -24,7 +24,6 @@ const packs = [
         img: "./images/Tanzania.jpeg",
         alt: "Tanzania"
     }
-
 ]
 
 let currentIndex = 0;
